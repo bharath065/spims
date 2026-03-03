@@ -62,6 +62,8 @@ batches_t = Table(
     Column("quantity_remaining", Integer),
     Column("expiry_date", Date),
     Column("purchase_price", Float),
+    Column("received_at", DateTime),
+    Column("is_active", Boolean, default=True)
     Column("received_at", DateTime)
 )
 
@@ -170,6 +172,8 @@ def seed_database():
                             "quantity_remaining": int(row['quantity_remaining']),
                             "expiry_date": exp_val,
                             "purchase_price": float(row['purchase_price']),
+                            "received_at": now,
+                            "is_active": True
                             "received_at": now
                         }
                     )
