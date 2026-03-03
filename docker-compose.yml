@@ -85,3 +85,11 @@ services:
 volumes:
   postgres_data:
   ml_saved_models:
+postgres:
+  image: postgres:15
+  environment:
+    POSTGRES_DB: spims_db
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres123
+  ports:
+    - "5432:5432"

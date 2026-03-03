@@ -1,0 +1,19 @@
+# Ignore raw datasets
+data/raw/*
+data/cleaned/*
+
+# Keep folder structure but ignore files
+!data/raw/.gitkeep
+!data/cleaned/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
