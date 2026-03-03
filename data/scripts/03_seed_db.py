@@ -64,6 +64,7 @@ batches_t = Table(
     Column("purchase_price", Float),
     Column("received_at", DateTime),
     Column("is_active", Boolean, default=True)
+    Column("received_at", DateTime)
 )
 
 sales_t = Table(
@@ -173,6 +174,7 @@ def seed_database():
                             "purchase_price": float(row['purchase_price']),
                             "received_at": now,
                             "is_active": True
+                            "received_at": now
                         }
                     )
 
